@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%) ;
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    --White: #fff;
+    --box-shadow: 0px 13px 6px 0px rgba(0,0,0,0.1);
+    --border-radius: .5rem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* STYLE FOR CENTER CONTENT */
+body{
+    background-image: url(images/bg-intro-desktop.png);
+    background-color: var(--Red);
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/* FLEX CONTAINER FOR BOTH SECTIONS */
+main{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* HIDDEN ERRORS */
+.hidden{
+    visibility: hidden;
+}
+
+
+/* TEXT SECTION */
+.text{
+    flex: 1;
+    color: var(--White);
+}
+
+.text h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.text p{
+    line-height: 2rem;
+}
+
+.form-container{
+    flex: 1;
+}
+
+/* FORM SECTION */
+.card{
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.trial{
+    background-color: var(--Blue);
+    padding: .5rem 0;
+    text-align: center;
+    color: var(--Grayish-Blue);
+    margin-bottom: 1.8rem;
+}
+
+.trial span{
+    color: var(--White);
+    cursor: pointer;
+}
+
+.form{
+    background-color: var(--White);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .7rem;
+}
+
+.form .flex-input{
+    display: block;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.form label{
+    width: 100%;
+}
+
+.input{
+    width: 100%;
+    font-size: 1rem;
+    border: 2px solid var(--Grayish-Blue);
+    border-radius: .4rem;
+    transition: border .4s;
+    padding: .4rem 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.input:hover,
+.input:focus{
+    border: 2px solid var(--Dark-Blue);
+}
+
+.btn{
+    width: 100%;
+    padding: .5rem 0;
+    text-transform: uppercase;
+    color: var(--White);
+    background-color: var(--Green);
+    border: none;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    font-size: .8rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: background-color  .4s;
+}
+
+.btn:hover,
+.btn:active{
+    background-color: hsl(154, 71%, 73%);
+}
+
+.error-sign{
+    position: absolute;
+    right: 2rem;
+}
+
+.error-message{
+    text-align: end;
+    margin-top: 0.2rem;
+    color: var(--Red);
+}
+
+.lastP{
+    color: var(--Grayish-Blue);
+    font-size: .7rem;
+}
+
+.lastP a{
+    text-decoration: none;
+    color: var(--Red);
+    font-weight: 700;
+}
+
+
+footer{
+    color: var(--White);
+    margin-top: 2rem ;
+}
+
+footer a{
+    color: var(--White);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+    .error-sign{
+        position: absolute;
+        right: 1rem;
+    }
+    
+    .error-message{
+        text-align: end;
+        margin-top: 0.2rem;
+        color: var(--Red);
+        font-size: .7rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    body{
+        padding: 1.5rem;
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    .text{
+        text-align: center;
+    }
+
+    .text h1{
+        font-size: 2rem;
+    }
+
+    .trial{
+        padding: 1rem 1rem;
+    }
+
+    .input{
+        font-size: .8rem;
+    }
+
+    .error-sign{
+        position: absolute;
+        right: .5rem;
+    }
+    
+    .error-message{
+        text-align: end;
+        margin-top: 0.2rem;
+        color: var(--Red);
+        font-size: .7rem;
+    }
+
+    .lastP{
+        text-align: center;
+    }
+
+    footer{
+        text-align: center;
+    }
+}
